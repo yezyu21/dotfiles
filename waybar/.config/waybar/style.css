@@ -1,0 +1,90 @@
+@import "colors.css";
+
+*{
+	all: unset;
+  border: none;
+  font-family: "Google Sans Flex", "JetBrainsMono Nerd Font Propo", "Noto Sans CJK JP", "Noto Sans CJK KR";
+}
+
+window#waybar{
+  background-color: @bg1;
+  color: @fg;
+}
+
+tooltip{
+	background-color: @bg1;
+	color: @fg;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 12px;
+}
+
+.module{
+	background-color : transparent;
+	color: @fg;
+	padding: 8px 16px;
+}
+
+.modules-left{
+  margin-left: -4px;
+  padding-left: 0;
+}
+
+.module + .module {
+    border-left: 1px solid @bg3;
+}
+
+#clock{
+	font-weight: 500;
+}
+
+#workspaces {
+  padding: 0 4px;
+}
+
+#workspaces button {
+	background-color: transparent;
+  color: @grey0;
+	padding: 0 8px;
+	border-radius: 0;
+	margin: 0;
+	transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+	min-width: 1.5rem;
+}
+
+#workspaces button.empty{
+	color: @bg4;
+}
+
+#workspaces button.active {
+	background-color: @aqua;
+	color: @bg0;
+	font-weight: 500;
+}
+
+#workspaces button:hover {
+  all: unset;
+	background-color: @bg3;
+	color: @fg;
+  padding: 0 8px;
+  min-width: 1.5rem;
+  transition: none;
+}
+
+#battery{
+	background-color: @green;
+	margin: 5px 0;
+	padding: 0 8px;
+	border-radius: 5px;
+	font-weight: 500;
+	color: @bg1;
+	letter-spacing: -1px;
+}
+
+#battery.warning {
+	background-color: @yellow;
+}
+
+#battery.critical {
+	background-color: @red;
+}
