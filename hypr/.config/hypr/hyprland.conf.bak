@@ -35,4 +35,5 @@ source = ~/.config/hypr/modules/bind.conf
 
 
 
-
+binde = , XF86MonBrightnessUp, exec, brightnessctl set +5%
+binde = , XF86MonBrightnessDown, exec, brightnessctl set 5%-   
